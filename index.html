@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Платформер</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="game-container">
+        <div class="game-header">
+            <h1>JavaScript Платформер</h1>
+            <div class="game-info">
+                <div class="score">Очки: <span id="score">0</span></div>
+                <div class="level">Уровень: <span id="level">1</span></div>
+                <div class="lives">Жизни: <span id="lives">3</span></div>
+            </div>
+        </div>
+
+        <div class="game-controls">
+            <button id="startBtn">Старт</button>
+            <button id="pauseBtn">Пауза</button>
+            <button id="restartBtn">Рестарт</button>
+        </div>
+
+        <canvas id="gameCanvas" width="800" height="500"></canvas>
+
+        <div class="instructions">
+            <p>Управление: ← → для движения, Space для прыжка</p>
+        </div>
+
+        <div id="gameOver" class="game-over hidden">
+            <h2>Игра окончена!</h2>
+            <p>Ваш счет: <span id="finalScore">0</span></p>
+            <button id="playAgainBtn">Играть снова</button>
+        </div>
+    </div>
+
+    <script src="js/InputHandler.js"></script>
+    <script src="js/Collision.js"></script>
+    <script src="js/Platform.js"></script>
+    <script src="js/Player.js"></script>
+    <script src="js/Renderer.js"></script>
+    <script src="js/Game.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
